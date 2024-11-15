@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" version="4.0" method="upgrade">
+    <name>System - AccessiWeb Widget</name>
+    <author>Dunp scpl</author>
+	<authorEmail>e.longhi@dunp.it</authorEmail>
+	<authorUrl>https://www.dunp.it</authorUrl>
+    <creationDate>2024-09-24</creationDate>
+    <copyright>(C) 2024 Dunp scpl</copyright>
+    <license>GPL-2.0-or-later</license>
+    <version>1.0.0</version>
+    <description>AccessiWeb Widget: Iniezione dello script di accessibilità</description>
+
+    <files>
+        <filename plugin="accessiweb">accessiweb.php</filename>
+    </files>
+	<updateservers>
+		<server type="extension" name="AccessiWeb Update Server">https://www.accessiweb.it/widget/JOOMLA/updateserver.xml</server>
+	</updateservers>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic" label="Parametri Widget AccessiWeb">
+                <field name="licenseKey" type="text" label="License Key" description="Inserisci la License Key" required="true"/>
+                <field name="primaryColor" type="text" label="Primary Color" default="#0d6efd" description="Colore primario del widget"/>
+                <field name="positionX" type="list" label="Position X" default="left" description="Allineamento orizzontale">
+                    <option value="left">Sinistra</option>
+                    <option value="right">Destra</option>
+                </field>
+                <field name="positionY" type="list" label="Position Y" default="bottom" description="Allineamento verticale">
+                    <option value="top">In alto</option>
+                    <option value="bottom">In basso</option>
+                </field>
+                <field name="offsetX" type="number" label="Offset X" default="10" description="Offset orizzontale (px)" />
+                <field name="offsetY" type="number" label="Offset Y" default="10" description="Offset verticale (px)" />
+                <field name="unitX" type="list" label="Unit X" default="px" description="Unità per l'offset orizzontale">
+                    <option value="px">Pixel</option>
+                    <option value="%">Percentuale</option>
+                </field>
+                <field name="unitY" type="list" label="Unit Y" default="px" description="Unità per l'offset verticale">
+                    <option value="px">Pixel</option>
+                    <option value="%">Percentuale</option>
+                </field>
+                <field name="iconSize" type="list" label="Icon Size" default="medium" description="Dimensione icona">
+                    <option value="small">Piccola</option>
+                    <option value="medium">Media</option>
+                    <option value="large">Grande</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
